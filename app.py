@@ -18,8 +18,9 @@ class Pessoa(BaseModel):
 @server.get('/pessoas')
 @spec.validate(resp=Response(HTTP_200=Pessoa))
 def pegar_pessoas():
+    """Endpoint GET/POST da API"""
 
-    return 'Programaticamente falando'
+    return 'Este endpoint serve tanto de GET quanto de POST!'
 
 
 @server.post('/pessoas')
